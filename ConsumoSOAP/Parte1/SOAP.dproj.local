@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/12/04 23:57:52.000.321,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/12/05 23:25:53.000.996,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/12/05 23:26:55.000.934,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/12/05 23:34:51.000.123,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/12/05 23:35:19.000.567,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/12/20 21:46:15.000.102,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/08 11:37:08.425,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/08 11:45:31.253,=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\AtendeCliente1.pas</Transaction>
+    <Transaction>2020/02/08 11:53:04.446,D:\PROJETOS\GitHub\trunk\ConsumoSOAP\Parte1\UfrmPrincipal.dfm=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/02/08 11:53:04.446,D:\PROJETOS\GitHub\trunk\ConsumoSOAP\Parte1\UfrmPrincipal.pas=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/08 11:53:06.759,D:\PROJETOS\GitHub\trunk\ConsumoSOAP\Parte1\AtendeCliente1.pas=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\AtendeCliente1.pas</Transaction>
+    <Transaction>2020/02/08 11:53:11.181,D:\PROJETOS\GitHub\trunk\ConsumoSOAP\Parte1\SOAP.dproj=C:\Users\kikob\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
