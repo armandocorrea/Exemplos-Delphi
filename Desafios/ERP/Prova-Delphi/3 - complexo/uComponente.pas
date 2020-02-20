@@ -10,6 +10,8 @@ type
 
   TComponente = class
   private
+    FName : String;
+
     FX: Integer;
     FXAnterior : Integer;
 
@@ -31,6 +33,8 @@ type
     procedure AdicionaComponente(aComponente: TComponente); virtual;
     procedure RemoveComponente(aComponente: TComponente); virtual;
 
+    property Name: String read FName write FName;
+
     property X : Integer read FX write SetX;
     property XAnterior : Integer read FXAnterior;
 
@@ -48,6 +52,9 @@ type
 
 implementation
 
+uses
+  System.SysUtils;
+
 
 procedure TComponente.AdicionaComponente(aComponente: TComponente);
 begin
@@ -56,7 +63,24 @@ begin
 end;
 
 procedure TComponente.RemoveComponente(aComponente: TComponente);
+var
+  I: Integer;
+  Removeu : Boolean;
 begin
+  Removeu := False;
+  for I := 0 to Pred(Length(FComponentes)) do
+  begin
+    if (FComponentes[I].FName = aComponente.FName) and not (Removeu) then
+    begin
+      FreeAndNil(FComponentes[I]);
+      Removeu := True;
+    end;
+
+    if Removeu then
+      FComponentes[I] := FComponentes[I+1];
+  end;
+
+  SetLength(FComponentes, Length(FComponentes)-1);
 end;
 
 procedure TComponente.SetAltura(const Value: Integer);

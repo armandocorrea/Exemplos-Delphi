@@ -48,6 +48,7 @@ var
 begin
   //Frame
   FFrame         := TFrame.Create;
+  FFrame.Name    := 'Frame1';
   FFrame.X       := 0;
   FFrame.Y       := 0;
   FFrame.Altura  := 500;
@@ -55,6 +56,7 @@ begin
 
   //Botão
   cBotao         := TBotao.Create;
+  cBotao.Name    := 'Botao1';
   cBotao.X       := 5;
   cBotao.Y       := 0;
   cBotao.Altura  := 25;
@@ -62,6 +64,7 @@ begin
 
   //Memo
   cMemo         := TMemo.Create;
+  cMemo.Name    := 'Memo1';
   cMemo.X       := 5;
   cMemo.Y       := 30;
   cMemo.Altura  := 100;
@@ -69,6 +72,7 @@ begin
 
   //Label
   cLabel         := TLabel.Create;
+  cLabel.Name    := 'Label1';
   cLabel.X       := 5;
   cLabel.Y       := 150;
   cLabel.Altura  := 10;
@@ -78,6 +82,7 @@ begin
   FFrame.AdicionaComponente(cMemo);
   FFrame.AdicionaComponente(cLabel);
   Self.ImprimeValores;
+  //FFrame.RemoveComponente(cMemo);
 end;
 
 procedure TfrmPrincipal.btnMudaValoresClick(Sender: TObject);
