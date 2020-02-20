@@ -1,0 +1,52 @@
+Simulação de formulário com componentes redimensionados automaticamente pelo 
+componente mais externo. 
+
+Tendo a classe abstrata abaixo:
+
+  TComponente = class
+  private
+    FX: Integer;
+    FY: Integer;
+    FAltura: Integer;
+    FLargura: Integer;
+    FInner: TComponenteArray;
+    FValor: String;
+  public
+  	//getters e setters …
+    procedure AdicionaComponente(Componente: TComponente); virtual;
+  end;
+
+Crie quatro classes que extendam essa classe, sendo que cada uma dessas 
+terá um comportamento específico ao redimensionamento da classe que as contenha.
+As quatro classes são: TFrame, TBotao, TMemo, TLabel.
+
+Um componente Frame será criado e deverá ter suas coordenadas preenchidas. 
+Três outros componentes (1 Botao, 1 Memo e 1 Label) também deverão ser criados 
+com suas coordenadas preenchidas e então adicionados ao Frame através do 
+método adicionaComponente().
+Sempre que o componente externo (neste caso o Frame) for redimensionado 
+(setadas novos valores aos seus atributos comprimento e largura), os componentes 
+internos deverão se comportar da seguinte forma:
+- TBotao: Deverá ter sua largura redimensionada proporcionalmente a nova largura
+  do Formulario. E deverá ser posicionado proporcionalmente com novas coordenadas x e y;
+- TMemo: Deverá ter sua largura e sua altura redimensionados proporcionalmente as
+  novas largura e altura do Formulario além de ser reposicionado nas coordenadas
+  x e y proporcionais as novas dimensões do Formulario;
+- TLabel: Não deverá ser redimensionado mas deverá ser reposicionado nas coordenadas
+  x e y de acordo com as novas dimensões do Formulario;
+- T: Igual ao TMemo.
+Outras regras:
+- Frames são os únicos componentes que permitem ser adicionados componentes em si,
+  inclusive outros Frames.
+- Se um Frame for redimensionado e este contiver outro Frame, o Frame interno será
+  redimensionado também, com comportamento igual ao do Memo.
+
+Obs.: A classe TComponente poderá ser alterada conforme necessidade, podendo extender
+ou implementar alguma classe específica para a resolução do problema ou até mesmo incluir
+novos atributos, desde que a estrutura básica da classe (incluindo os nomes dos atributos
+pré-definidos) não seja alterada (conforme acima).
+
+Os componentes TFrame, TBotao, TMemo e TLabel não são visuais, sendo assim não é necessário 
+implementar a interface gráfica para ilustrar o comportamento bem como não precisam 
+herdar classes base de componentes visuais do delphi (TFrame, TButton, TMemo e TLabel), 
+deverão apenas implementar os comportamentos definidos acima.

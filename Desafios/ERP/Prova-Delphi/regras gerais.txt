@@ -1,0 +1,10 @@
+Resolver as questões na ordem (primeiro a simples, depois a média depois a complexa), 
+pois elas serão avaliadas nessa ordem.
+
+Ao terminar o tempo, mesmo que alguma questão não for completada (por exemplo,
+acabou a simples e a média, mas não terminou a complexa) enviar o código feito, 
+para ser avaliado até que ponto da solução foi atingido.
+
+Ao compactar os fontes para devolver o resultado por email, lembrar de apagar os 
+arquivos .exe, pois os servidores de email geralmente recusam os anexos que contenham 
+executáveis.
