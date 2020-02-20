@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/02/19 22:47:40.000.051,=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\3 - complexo\Unit1.pas</Transaction>
+    <Transaction>2020/02/19 22:48:13.000.766,C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\3 - complexo\Unit1.dfm=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\3 - complexo\UntPrincipal.dfm</Transaction>
+    <Transaction>2020/02/19 22:48:13.000.766,C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\3 - complexo\Unit1.pas=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\3 - complexo\UntPrincipal.pas</Transaction>
+  </Transactions>
+</BorlandProject>

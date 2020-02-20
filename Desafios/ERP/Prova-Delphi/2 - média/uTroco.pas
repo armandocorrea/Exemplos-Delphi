@@ -43,6 +43,7 @@ begin
     ceNota20   : Result := ' nota de 20 ';
     ceNota10   : Result := ' nota de 10 ';
     ceNota5    : Result := ' nota de 5 ';
+    ceNota2    : Result := ' nota de 2 ';
     ceMoeda100 : Result := ' moeda de 1 ';
     ceMoeda50  : Result := ' moeda de 0.50 ';
     ceMoeda25  : Result := ' moeda de 0.25 ';

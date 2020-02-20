@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/02/19 19:15:05.000.841,=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.pas</Transaction>
+    <Transaction>2020/02/19 19:15:29.000.618,C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\UntPrincipal.dfm=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.dfm</Transaction>
+    <Transaction>2020/02/19 19:15:29.000.618,C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\UntPrincipal.pas=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.pas</Transaction>
+    <Transaction>2020/02/19 21:16:20.000.855,=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.pas</Transaction>
+    <Transaction>2020/02/19 21:19:19.000.365,C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\uSubstitui2.pas=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.pas</Transaction>
+    <Transaction>2020/02/19 22:44:03.000.618,=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.pas</Transaction>
+    <Transaction>2020/02/19 22:44:31.000.233,C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\Unit1.pas=C:\Users\kikob\Desktop\Desafio Delphi - ERP\Desafio Delphi - ERP\Prova-Delphi\1 - simples\uISubstitui2.pas</Transaction>
+  </Transactions>
+</BorlandProject>
