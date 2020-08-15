@@ -1,0 +1,3 @@
+Site PinPoint: https://aws.amazon.com/pt/pinpoint/
+Preços: https://aws.amazon.com/pt/pinpoint/pricing/?nc=sn&loc=3
+Documentação: https://docs.aws.amazon.com/pt_br/pinpoint/latest/developerguide/send-messages-sms.html

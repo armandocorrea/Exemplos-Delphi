@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSPinPoint", "SMSPinPoint.csproj", "{FEE15544-D6DC-49AF-8707-94B64F78853A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE15544-D6DC-49AF-8707-94B64F78853A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE15544-D6DC-49AF-8707-94B64F78853A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE15544-D6DC-49AF-8707-94B64F78853A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE15544-D6DC-49AF-8707-94B64F78853A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44CA5F35-AAB9-41FA-8395-6634258EEE2D}
+	EndGlobalSection
+EndGlobal
