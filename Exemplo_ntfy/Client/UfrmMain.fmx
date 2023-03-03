@@ -1,0 +1,58 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Client'
+  ClientHeight = 427
+  ClientWidth = 275
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object rectPrincipal: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Size.Width = 275.000000000000000000
+    Size.Height = 427.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object rectMensagem: TRectangle
+      Fill.Color = xFF99DD5A
+      Position.X = 8.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object lblTitulo: TLabel
+        StyledSettings = [Family, Size, FontColor]
+        Position.X = 3.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        Text = 'T'#237'tulo'
+        TabOrder = 1
+      end
+      object lblMensagem: TLabel
+        Position.X = 3.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 257.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Mensagem'
+        TabOrder = 0
+      end
+      object ShadowEffect1: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 2000
+    OnTimer = Timer1Timer
+    Left = 120
+    Top = 200
+  end
+end
