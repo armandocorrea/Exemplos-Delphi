@@ -15,6 +15,9 @@ type
   private
     { Private declarations }
     procedure GravarLog(aTexto: string);
+
+    //Acessando o registro do windows pelo service
+    function GetCaminhoBD: String;
   public
     function GetServiceController: TServiceController; override;
     { Public declarations }
@@ -25,11 +28,38 @@ var
 
 implementation
 
+uses
+  System.win.Registry;
+
 {$R *.dfm}
 
 procedure ServiceController(CtrlCode: DWord); stdcall;
 begin
   ServiceDelphi.Controller(CtrlCode);
+end;
+
+function TServiceDelphi.GetCaminhoBD: String;
+var
+  xRegistro: TRegistry;
+begin
+  xRegistro := TRegistry.Create;
+
+  try
+    try
+      xRegistro.Access  := KEY_READ;
+      xRegistro.RootKey := HKEY_CURRENT_USER;
+
+      xRegistro.OpenKey('\Configurações\', True);
+
+      Result := xRegistro.ReadString('Path_BD');
+    except
+      on e: Exception do
+        raise Exception.Create(e.Message);
+    end;
+  finally
+    xRegistro.CloseKey;
+    xRegistro.Free;
+  end;
 end;
 
 function TServiceDelphi.GetServiceController: TServiceController;
@@ -62,6 +92,7 @@ end;
 procedure TServiceDelphi.ServiceAfterInstall(Sender: TService);
 begin
   Self.GravarLog('Serviço Instalado com Sucesso.');
+  Self.GravarLog('Caminho do BD: ' + GetCaminhoBD);
 end;
 
 procedure TServiceDelphi.ServiceStart(Sender: TService; var Started: Boolean);
