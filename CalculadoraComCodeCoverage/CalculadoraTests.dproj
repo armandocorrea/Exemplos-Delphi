@@ -106,7 +106,7 @@
         <Manifest_File>(None)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
         <DCC_MapFile>3</DCC_MapFile>
-        <DCC_UnitSearchPath>C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\CalculadoraComSonarQube\src\classes;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\CalculadoraComCodeCoverage\src\classes;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>

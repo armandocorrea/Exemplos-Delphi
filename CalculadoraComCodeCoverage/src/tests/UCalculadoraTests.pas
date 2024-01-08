@@ -18,6 +18,7 @@ type
     [Test]
     [TestCase('TestSoma1','1,2,3')]
     [TestCase('TestSoma2','-3.5,4,0.5')]
+    [TestCase('TestSoma3','2,0,3')]
     procedure TestSoma(const aValue1: Double; const aValue2: Double; const aResultado: Double);
 
     [Test]

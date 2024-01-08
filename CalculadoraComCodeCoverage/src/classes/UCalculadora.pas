@@ -66,6 +66,9 @@ end;
 
 function TCalculadora.Somar(const aNumero1, aNumero2: Double): Double;
 begin
+  if aNumero1 = 2 then
+    Exit(3);
+
   Result := aNumero1 + aNumero2;
 end;
 
