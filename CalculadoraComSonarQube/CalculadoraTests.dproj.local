@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/01/11 22:15:02.000.672,=C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\CalculadoraComSonarQube\src\tests\DUnitX.Loggers.XML.SonarQube.pas</Transaction>
+    <Transaction>2024/01/11 22:18:00.000.289,=C:\Program Files (x86)\Embarcadero\Studio\22.0\source\DunitX\DUnitX.inc</Transaction>
+    <Transaction>2024/01/11 22:18:46.000.310,C:\Program Files (x86)\Embarcadero\Studio\22.0\source\DunitX\DUnitX.inc=</Transaction>
+    <Transaction>2024/01/12 15:04:57.000.201,=C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\CalculadoraComSonarQube\src\tests\DUnitX.Loggers.XML.SonarQube.pas</Transaction>
+  </Transactions>
+</BorlandProject>
