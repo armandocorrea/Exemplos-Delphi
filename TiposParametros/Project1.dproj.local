@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/01/15 12:03:47.000.471,=C:\Users\kikob\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/01/15 12:06:57.000.184,C:\Users\kikob\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\TiposParametros\UfrmPrincipal.pas</Transaction>
+    <Transaction>2024/01/15 12:06:57.000.184,C:\Users\kikob\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\TiposParametros\UfrmPrincipal.dfm</Transaction>
+    <Transaction>2024/01/15 12:07:00.000.867,C:\Users\kikob\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\kikob\OneDrive\Área de Trabalho\Exemplos_Delphi\Exemplos-Delphi\TiposParametros\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
