@@ -1,0 +1,4 @@
+https://refactoring.guru/pt-br/design-patterns
+https://www.andrecelestino.com/delphi-design-patterns-retrospectiva/
+https://github.com/AndreLuisCelestino/Delphi-DesignPatterns/tree/master
+https://academiadocodigo.com.br/campanha/clube-de-programadores/
