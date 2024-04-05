@@ -1,0 +1,12 @@
+{
+	"name": "ORM",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/academiadocodigo/simpleorm": "^2.02.11",
+		"https://github.com/hashload/ormbr": "^1.1.8"
+	}
+}
