@@ -13,9 +13,11 @@ type
     AmazonConnectionInfo1: TAmazonConnectionInfo;
     lstBuckets: TListBox;
     lstFiles: TListBox;
+    btnDownload: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnCarregarBucketsClick(Sender: TObject);
     procedure lstBucketsClick(Sender: TObject);
+    procedure btnDownloadClick(Sender: TObject);
   private
     { Private declarations }
     S3: TAmazonStorageService;
@@ -29,8 +31,9 @@ var
   Form1: TForm1;
 
 const
-  ACCESS_KEY = 'SUA KEY';
-  SECRET_KEY = 'SUA SECRET';
+  ACCESS_KEY = 'SEU ACCESS KEY AQUI';
+  SECRET_KEY = 'SUA SECRET AQUI';
+  SUCCESS = 200;
 
 implementation
 
@@ -47,12 +50,39 @@ begin
     LList := S3.ListBuckets(LCloudResp);
     lstBuckets.Clear;
 
+    if LCloudResp.StatusCode <> SUCCESS then
+      raise Exception.Create('Error: ' + LCloudResp.StatusCode.ToString + ' - ' +
+        LCloudResp.StatusMessage);
+
     if Assigned(LList) then
       for var i := 0 to pred(LList.Count) do
         lstBuckets.Items.Add(LList.Names[i]);
   finally
     LCloudResp.Free;
     LList.Free;
+  end;
+end;
+
+procedure TForm1.btnDownloadClick(Sender: TObject);
+var
+  LStream: TStream;
+  LDir, LBucket, LFile: String;
+begin
+  Screen.Cursor := crHourGlass;
+  LStream := TMemoryStream.Create;
+  try
+    LBucket := lstBuckets.Items[lstBuckets.ItemIndex];
+    LFile := lstFiles.Items[lstFiles.ItemIndex];
+
+    S3.GetObject(LBucket, LFile, LStream);
+
+    LDir := ExtractFilePath(ParamStr(0));
+
+    TMemoryStream(LStream).SaveToFile(LDir + PathDelim + LFile);
+    ShowMessage('Arquivo baixado com sucesso!');
+  finally
+    LStream.Free;
+    Screen.Cursor := crDefault;
   end;
 end;
 

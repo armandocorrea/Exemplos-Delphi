@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 331
+  ClientHeight = 289
   ClientWidth = 791
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -37,6 +37,15 @@ object Form1: TForm1
     Height = 224
     ItemHeight = 15
     TabOrder = 2
+  end
+  object btnDownload: TButton
+    Left = 400
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = 'Download'
+    TabOrder = 3
+    OnClick = btnDownloadClick
   end
   object AmazonConnectionInfo1: TAmazonConnectionInfo
     TableEndpoint = 'sdb.amazonaws.com'
