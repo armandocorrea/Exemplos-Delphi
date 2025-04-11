@@ -47,11 +47,42 @@ object Form1: TForm1
     TabOrder = 3
     OnClick = btnDownloadClick
   end
+  object btnUpload: TButton
+    Left = 481
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = 'Upload'
+    TabOrder = 4
+    OnClick = btnUploadClick
+  end
+  object btnCriarBucket: TButton
+    Left = 119
+    Top = 16
+    Width = 105
+    Height = 25
+    Caption = 'Criar Bucket'
+    TabOrder = 5
+    OnClick = btnCriarBucketClick
+  end
+  object btnExcluir: TButton
+    Left = 562
+    Top = 16
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 6
+    OnClick = btnExcluirClick
+  end
   object AmazonConnectionInfo1: TAmazonConnectionInfo
     TableEndpoint = 'sdb.amazonaws.com'
     QueueEndpoint = 'sqs.amazonaws.com'
     StorageEndpoint = 's3.amazonaws.com'
     Left = 320
     Top = 22
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 320
+    Top = 88
   end
 end
