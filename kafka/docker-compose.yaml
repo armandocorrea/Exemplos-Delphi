@@ -1,0 +1,58 @@
+version: '3'
+services:
+  zookeeper:
+    image: zookeeper:3.4.9
+    hostname: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_PORT: 2181
+      ZOO_SERVERS: server.1=zookeeper:2888:3888
+    volumes:
+      - ./data/zookeeper/data:/data
+      - ./data/zookeeper/datalog:/datalog
+  kafka1:
+    image: confluentinc/cp-kafka:5.3.0
+    hostname: kafka1
+    ports:
+      - "9091:9091"
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: LISTENER_DOCKER_INTERNAL://kafka1:19091,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9091
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: LISTENER_DOCKER_INTERNAL
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+      KAFKA_BROKER_ID: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - ./data/kafka1/data:/var/lib/kafka/data
+    depends_on:
+      - zookeeper
+  kafdrop:
+    image: obsidiandynamics/kafdrop
+    restart: "no"
+    ports:
+      - "9000:9000"
+    environment:
+      KAFKA_BROKERCONNECT: "kafka1:19091"
+    depends_on:
+      - kafka1 
+
+  #control-center:
+  #  image: confluentinc/cp-enterprise-control-center:6.0.1
+  #  hostname: control-center
+  #  depends_on:
+  #    - kafka
+  #  ports:
+  #    - "9021:9021"
+  #  environment:
+  #    CONTROL_CENTER_BOOTSTRAP_SERVERS: 'kafka:9092'
+  #    CONTROL_CENTER_REPLICATION_FACTOR: 1
+  #    CONTROL_CENTER_CONNECT_CLUSTER: http://app-connect:8083
+  #    PORT: 9021
+
+#Sobre o Zookeeper: https://dattell.com/data-architecture-blog/what-is-zookeeper-how-does-it-support-kafka/
+#Detalhes das variáveis de ambiente:
+#Zookeper: https://hub.docker.com/_/zookeeper
+#Kafka: https://docs.confluent.io/platform/current/kafka/multi-node.html
+#Kafdrop: https://github.com/obsidiandynamics/kafdrop    

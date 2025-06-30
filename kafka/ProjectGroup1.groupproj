@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{3DDC8FEC-5F63-43A9-BB69-248DC5299440}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="producer\KafkaProducer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="consumer\KafkaConsumer.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="KafkaProducer">
+        <MSBuild Projects="producer\KafkaProducer.dproj"/>
+    </Target>
+    <Target Name="KafkaProducer:Clean">
+        <MSBuild Projects="producer\KafkaProducer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KafkaProducer:Make">
+        <MSBuild Projects="producer\KafkaProducer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="KafkaConsumer">
+        <MSBuild Projects="consumer\KafkaConsumer.dproj"/>
+    </Target>
+    <Target Name="KafkaConsumer:Clean">
+        <MSBuild Projects="consumer\KafkaConsumer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="KafkaConsumer:Make">
+        <MSBuild Projects="consumer\KafkaConsumer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="KafkaProducer;KafkaConsumer"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="KafkaProducer:Clean;KafkaConsumer:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="KafkaProducer:Make;KafkaConsumer:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
