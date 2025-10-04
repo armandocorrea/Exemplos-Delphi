@@ -8,6 +8,12 @@ uses
 
 begin
 
+  THorse.Get('/',
+    procedure(Req: THorseRequest; Res: THorseResponse; Next: TProc)
+    begin
+      Res.Send('Ok');
+    end);
+
   THorse.Get('/ping',
     procedure(Req: THorseRequest; Res: THorseResponse; Next: TProc)
     begin
