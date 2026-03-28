@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste CORS</title>
+</head>
+<body>
+
+  <h2>Teste de CORS</h2>
+
+  <button onclick="testarCORS()">Testar</button>
+
+  <pre id="resultado"></pre>
+
+  <script>
+    function testarCORS() {
+      fetch('http://localhost:8080/api/cors', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('resultado').innerText = data;
+      })
+      .catch(error => {
+        document.getElementById('resultado').innerText =
+          'Erro de CORS ou requisição:\n' + error;
+        console.error(error);
+      });
+    }
+  </script>
+
+</body>
+</html>
